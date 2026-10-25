@@ -1,0 +1,14 @@
+id = "machine-memory"
+name = "Machine memory"
+version = "0.2.0"
+min_herdr_version = "0.9.0"
+description = "Tab-bar memory usage for this machine and every connected Herdr machine"
+platforms = ["linux", "macos"]
+
+[[startup]]
+command = ["python3", "memory.py", "setup"]
+
+[[actions]]
+id = "setup"
+title = "Write the tab-bar status launcher"
+command = ["python3", "memory.py", "setup"]
